@@ -31,6 +31,7 @@
     "tailwindcss": "npm:tailwindcss@3.3.5",
     "tailwindcss/": "npm:/tailwindcss@3.3.5/",
     "tailwindcss/plugin": "npm:/tailwindcss@3.3.5/plugin.js",
+    "wikity": "npm:wikity@1.3.0", 
     "$std/": "https://deno.land/std@0.208.0/"
   },
   "compilerOptions": {

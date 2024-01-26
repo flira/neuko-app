@@ -4,22 +4,42 @@
 
 import * as $_404 from "./routes/_404.tsx";
 import * as $_app from "./routes/_app.tsx";
-import * as $api_joke from "./routes/api/joke.ts";
-import * as $greet_name_ from "./routes/greet/[name].tsx";
+import * as $autocomplete from "./routes/autocomplete.tsx";
+import * as $controller_variant_ from "./routes/controller/[variant].tsx";
+import * as $controller_index from "./routes/controller/index.tsx";
 import * as $index from "./routes/index.tsx";
-import * as $display from "./islands/display.tsx";
+import * as $notes from "./routes/notes.tsx";
+import * as $wiki_title_ from "./routes/wiki/[title].tsx";
+import * as $wiki_index from "./routes/wiki/index.tsx";
+import * as $controls_Controls from "./islands/controls/Controls.tsx";
+import * as $controls_EnterCtrl from "./islands/controls/EnterCtrl.tsx";
+import * as $controls_FocusCtrls from "./islands/controls/FocusCtrls.tsx";
+import * as $controls_ScrollCtrls from "./islands/controls/ScrollCtrls.tsx";
+import * as $notesInteraction_Keyboard from "./islands/notesInteraction/Keyboard.tsx";
+import * as $notesInteraction_index from "./islands/notesInteraction/index.tsx";
+import * as $wiki_Wiki from "./islands/wiki/Wiki.tsx";
 import { type Manifest } from "$fresh/server.ts";
 
 const manifest = {
   routes: {
     "./routes/_404.tsx": $_404,
     "./routes/_app.tsx": $_app,
-    "./routes/api/joke.ts": $api_joke,
-    "./routes/greet/[name].tsx": $greet_name_,
+    "./routes/autocomplete.tsx": $autocomplete,
+    "./routes/controller/[variant].tsx": $controller_variant_,
+    "./routes/controller/index.tsx": $controller_index,
     "./routes/index.tsx": $index,
+    "./routes/notes.tsx": $notes,
+    "./routes/wiki/[title].tsx": $wiki_title_,
+    "./routes/wiki/index.tsx": $wiki_index,
   },
   islands: {
-    "./islands/display.tsx": $display,
+    "./islands/controls/Controls.tsx": $controls_Controls,
+    "./islands/controls/EnterCtrl.tsx": $controls_EnterCtrl,
+    "./islands/controls/FocusCtrls.tsx": $controls_FocusCtrls,
+    "./islands/controls/ScrollCtrls.tsx": $controls_ScrollCtrls,
+    "./islands/notesInteraction/Keyboard.tsx": $notesInteraction_Keyboard,
+    "./islands/notesInteraction/index.tsx": $notesInteraction_index,
+    "./islands/wiki/Wiki.tsx": $wiki_Wiki,
   },
   baseUrl: import.meta.url,
 } satisfies Manifest;

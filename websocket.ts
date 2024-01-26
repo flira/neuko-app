@@ -19,7 +19,7 @@ Deno.serve({
 
       socket.onmessage = (event) => {
         connectedClients.forEach((client, socket) => {
-          if (/app/i.test(client)) {
+          if (!/controller/i.test(client)) {
             socket.send(event.data);
           }
         })

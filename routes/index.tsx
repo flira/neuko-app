@@ -1,11 +1,19 @@
-import {Display} from '../islands/display.tsx';
+import { Wiki } from "../islands/wiki/Wiki.tsx";
 
 export default function Home() {
-
   return (
-    <>
-      <h1>Last command</h1>
-      <Display/>
-    </>
+    <div class="align-center flex flex-col w-full min-h-screen justify-center">
+      <div class="flex flex-col items-center justify-center mt-[-20vh]">
+        <h1>Selecione uma aplicação</h1>
+        <ul>
+          <li>
+            <a href="/controller">Controle</a>
+          </li>
+          <li>
+            <a href="/wiki">Interface</a>
+          </li>
+        </ul>
+      </div>
+    </div>
   );
 }
