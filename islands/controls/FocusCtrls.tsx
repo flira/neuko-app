@@ -8,7 +8,7 @@ export function FocusCtrls({ action }: CtrlProps) {
       <h2>Selecionar</h2>
       <ul class="flex gap-4 grow items-center justify-center">
         <li>
-          <Button onClick={action.bind(null, 'previous')}>
+          <Button onClick={action.bind(null, 'left')}>
             <img
               class="opacity-75"
               src={"/icons/west_FILL0_wght400_GRAD0_opsz24.svg"}
@@ -19,7 +19,7 @@ export function FocusCtrls({ action }: CtrlProps) {
           </Button>
         </li>
         <li>
-          <Button onClick={action.bind(null, 'next')}>
+          <Button onClick={action.bind(null, 'right')}>
             <img
               class="opacity-75"
               src={"/icons/east_FILL0_wght400_GRAD0_opsz24.svg"}

@@ -2,7 +2,6 @@ import wikity from "wikity";
 import { Handlers } from "$fresh/server.ts";
 import { PageProps } from "$fresh/server.ts";
 import { Wiki } from "../../islands/wiki/Wiki.tsx";
-import { parseWikitext } from "../../utils/parseWikitext.ts";
 import type { WikiResponse } from "../../types/index.d.ts";
 
 export const handler: Handlers = {
@@ -15,8 +14,11 @@ export const handler: Handlers = {
   },
 };
 
+const cleanCode: (html: string) => string = (html) =>
+  html.replaceAll(/{{.*}}/g, "").replaceAll(/href=\"/gi, 'href="/wiki');
+
 export default function (props: PageProps) {
-  const html = wikity.parse(props.data.source);
+  const html = wikity.parse(cleanCode(props.data.source));
   return (
     <div class="max-w-2xl m-auto px-4 py-6">
       <Wiki>
